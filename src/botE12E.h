@@ -10,7 +10,7 @@ HTTPClient https;
 
 void koneksiWifi(const char* NAMA ,const char* PSWD){
  WiFi.mode(WIFI_STA);
- WiFiMulti.addAP(NAMA , PSWD);
+ Wifi.begin(NAMA , PSWD);
  while (WiFi.status() != WL_CONNECTED) {
    delay(500);
   }
